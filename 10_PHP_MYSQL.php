@@ -161,3 +161,13 @@
         }
     ?>
 </html>
+
+<!-- 
+description of the table
+Field         Type
+id          int(11)
+name        varchar(30)
+price       int(11)
+description varchar(250)
+
+-->
