@@ -1,0 +1,6 @@
+
+<!ELEMENT Emp_Details (Employee)>
+<!ELEMENT Employee (name, post, age)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT post (#PCDATA)>
+<!ELEMENT age (#PCDATA)>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p id="x"></p>
+
+	<script>
+		var x = "";
+		for(var i = 1; i < 21; i++){
+			if(i % 2 == 0){
+				x = x + i + " ";
+			}
+		}
+		document.getElementById("x").innerHTML = x;
+	</script>
+</body>
+</html>

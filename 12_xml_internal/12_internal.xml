@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="stylesheet_xml.xsl" ?>
+<!DOCTYPE Emp_Details
+[
+<!ELEMENT Emp_Details (Employee)>
+<!ELEMENT Employee (name, post, age)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT post (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+]>
+
+<Emp_Details>
+    <Employee>
+        <name>John</name>
+        <post>Manager</post>
+        <age>35</age>
+    </Employee>
+    <Employee>
+        <name>Bohn</name>
+        <post>Executive</post>
+        <age>26</age>
+    </Employee>
+    <Employee>
+        <name>Shrek</name>
+        <post>CEO</post>
+        <age>28</age>
+    </Employee>
+</Emp_Details>

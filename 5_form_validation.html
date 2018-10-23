@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome</title>
+</head>
+<body>
+	<h1><center><u>Registration Form</u></center></h1>
+	<form id="registration" name="registration">
+		<table>
+			<tr>
+				<td>UserID:</td>
+				<td><input type="text" id="userid" placeholder="5-12 characters long"></td><td id="display" style="color:navy"></td>
+			</tr>
+
+			<tr>
+				<td>Password:</td>
+				<td><input type="text" id="password" placeholder="7-12 characters long"></td><td id="display1" style="color:navy"></td>
+			</tr>
+
+			<tr>
+				<td>Username:</td>
+				<td><input type="text" id="username" placeholder="Alphabets only"></td><td id="display2" style="color:navy"></td>
+			</tr>
+			<tr>
+				<td>Address:</td>
+				<td><input type="text" id="address" placeholder="Optional"></td><td id="display3" style="color:navy"></td>
+			</tr>
+			<tr>
+				<td>Country:</td>
+				<td>
+					<select id="country">
+						<option value="default">Select Country</option>
+						<option value="IN">India</option>
+						<option value="OTH">Others</option>
+					</select>
+				</td>
+				<td id="display4" style="color:navy"></td>
+			</tr>
+
+			<tr>
+				<td>Zipcode:</td>
+				<td><input type="text" name="zipcode" id="zipcode" placeholder="Enter Zipcode"></td><td id="display5" style="color:navy"></td>
+			</tr>
+
+			<tr>
+				<td>Email:</td>
+				<td><input type="text" id="email" placeholder="Enter EmailID"></td><td id="display6" style="color:navy"></td>
+			</tr>
+
+			<tr>
+				<td>Gender:</td>
+				<td>
+					<input type="radio" name="gender" value="male">Male
+					<input type="radio" name="gender" value="female">Female
+				</td>
+			</tr>
+
+			<tr>
+				<td>Languags known:</td><td><input type="checkbox" name="language" value="eng">English<input type="checkbox" name="lang" value="hin">Hindi<input type="checkbox" name="lang" value="mara">Marathi</td>
+			</tr>
+
+			<tr>
+				<td>About us:</td><td colspan=""><textarea rows="4" cols="25"></textarea></td>
+			</tr>
+
+			<tr>
+				<td><button type="button" onclick="formValidation();">Submit</button></td>
+			</tr>
+
+			<tr>
+				<td><p id="x"></p>
+			</tr>
+			
+		</table>
+	</form>
+
+	<script>
+		function formValidation(){
+			if(validateUserId()){
+				if(validateZipCode()){
+					if(validateGender()){
+						document.getElementById("x").innerHTML = "Validated";
+						console.log("fv");
+					}
+					else
+						alert("Gender not selected");
+						console.log("zx");
+				}
+				else
+					alert("Zip Code Not validated");
+					console.log("zxcv");
+			}
+			else
+				alert("User Id not validated");
+				console.log("zxcvbnm");
+		}
+
+		function validateZipCode(){
+			var exp = "^[0-9]+$";
+			var zip = document.getElementById("zipcode");
+			if(zip.value.match(exp)){
+				return true;
+			}
+			else{
+				return false;
+			}
+		}
+
+		function validateUserId(){
+			var id = document.getElementById("userid").value;
+			if(id.length >= 5 && id.length <= 12)
+				return true;
+			return false;
+		}
+
+		function validateGender(){
+			var radios = document.getElementsByName("gender");
+			var checked = false;
+
+		    var i = 0;
+		    while (!checked && i < radios.length) {
+		        if (radios[i].checked) checked = true;
+		        i++;        
+		    }
+
+		    return checked;
+		}
+	</script>
+</body>
+</html>

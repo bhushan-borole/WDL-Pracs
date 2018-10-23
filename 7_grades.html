@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	Enter Marks: <input type="number" name="grade" id="grade">
+	<button onclick="findGrade()">Submit</button>
+	<p id="x"></p>
+
+	<script type="text/javascript">
+		function findGrade(){
+			var grade = parseInt(document.getElementById("grade").value);
+			if(grade >= 90)
+				document.getElementById("x").innerHTML = 'A';
+			
+			else if(grade < 90 && grade >= 80)
+				document.getElementById("x").innerHTML = 'B';
+			
+			else if(grade < 80 && grade >= 70)
+				document.getElementById("x").innerHTML = 'C';
+
+			else if (grade < 70 && grade >=60)
+				document.getElementById("x").innerHTML = 'D';
+
+			else
+				document.getElementById("x").innerHTML = 'E';
+		}
+	</script>
+</body>
+</html>
