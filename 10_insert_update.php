@@ -84,3 +84,12 @@
 
     ?>
 </html>
+
+<!-- 
+Table Details
+    Coloumn_Name        DataType
+1)     pid             varchar(50)
+2)     name            varchar(50)
+3)     roll             int
+
+-->
