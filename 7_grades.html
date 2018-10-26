@@ -4,13 +4,24 @@
 	<title></title>
 </head>
 <body>
-	Enter Marks: <input type="number" name="grade" id="grade">
+	Enter Marks: <br><br>
+	Subject 1: <input type="number" name="sub1" id="sub1"><br><br>
+	Subject 2: <input type="number" name="sub2" id="sub2"><br><br>
+	Subject 3: <input type="number" name="sub3" id="sub3"><br><br>
+	Subject 4: <input type="number" name="sub4" id="sub4"><br><br>
+	Subject 5: <input type="number" name="sub5" id="sub5"><br><br>
 	<button onclick="findGrade()">Submit</button>
 	<p id="x"></p>
 
 	<script type="text/javascript">
 		function findGrade(){
-			var grade = parseInt(document.getElementById("grade").value);
+			var sub1 = parseFloat(document.getElementById("sub1").value);
+			var sub2 = parseFloat(document.getElementById("sub2").value);
+			var sub3 = parseFloat(document.getElementById("sub3").value);
+			var sub4 = parseFloat(document.getElementById("sub4").value);
+			var sub5 = parseFloat(document.getElementById("sub5").value);
+			var grade = parseFloat((sub1 + sub2 + sub3 + sub4 + sub5)/5);
+			console.log(grade);
 			if(grade >= 90)
 				document.getElementById("x").innerHTML = 'A';
 			
